@@ -45,12 +45,18 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding=true
     }
 }
 
 
 dependencies {
-//    implementation("androidx.camera:camera-core:1.2.2")
+implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation("com.google.mlkit:face-detection:16.1.5")
+    //    implementation("androidx.camera:camera-core:1.2.2")
 //    implementation("androidx.camera:camera-camera2:1.2.2")
 //    implementation("androidx.camera:camera-lifecycle:1.2.2")
 //    implementation("androidx.camera:camera-video:1.2.2")
@@ -72,6 +78,9 @@ dependencies {
     implementation("androidx.camera:camera-mlkit-vision:${camerax_version}")
     // If you want to additionally use the CameraX Extensions library
     implementation("androidx.camera:camera-extensions:${camerax_version}")
+
+    implementation("androidx.navigation:navigation-compose:2.7.5")
+    implementation("com.google.accompanist:accompanist-navigation-animation:0.31.1-alpha")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
